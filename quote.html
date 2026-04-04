@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init('tg7M_ArsUWxl1VQWb');</script>
+  <script>emailjs.init({ publicKey: 'tg7M_ArsUWxl1VQWb' });</script>
   <style>
     /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -956,7 +956,7 @@
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
-      emailjs.send('service_lc8h0fg', 'template_rnv9db9', {
+      emailjs.send('service_lc8h0fg', 'template_bh4ncsi', {
         first_name:  fn,
         last_name:   document.getElementById('ln').value.trim(),
         from_email:  em,
