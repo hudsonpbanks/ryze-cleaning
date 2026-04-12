@@ -1334,6 +1334,92 @@
       .steps-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2.2rem; }
     }
+
+    /* ── Hero Quick-Form ── */
+    .hero-quick-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+    .hero-quick-form input,
+    .hero-quick-form select {
+      flex: 1;
+      min-width: 140px;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      outline: none;
+      transition: border-color 0.2s;
+      min-height: 44px;
+    }
+    .hero-quick-form input::placeholder { color: rgba(255,255,255,0.45); }
+    .hero-quick-form input:focus,
+    .hero-quick-form select:focus { border-color: rgba(255,255,255,0.55); }
+    .hero-quick-form select { color: rgba(255,255,255,0.7); }
+    .hero-quick-form select option { background: #111; color: #fff; }
+    .hero-quick-form .btn-primary {
+      background: #fff;
+      color: #080808;
+      flex-shrink: 0;
+    }
+    .hero-quick-form .btn-primary:hover { background: rgba(255,255,255,0.9); }
+    .hero-form-note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: -28px;
+      margin-bottom: 36px;
+    }
+
+    /* ── Hero Trust Badges ── */
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 100px;
+      padding: 6px 13px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.03em;
+    }
+    .hero-badge-pill svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    /* ── Hero Phone ── */
+    .hero-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+    .hero-phone svg { width: 16px; height: 16px; stroke: rgba(255,255,255,0.6); }
+    .hero-phone span { color: rgba(255,255,255,0.5); font-weight: 400; font-size: 0.85rem; margin-left: 4px; }
+
+    @media (max-width: 640px) {
+      .hero-quick-form { flex-direction: column; }
+      .hero-quick-form input,
+      .hero-quick-form select,
+      .hero-quick-form .btn-primary { width: 100%; }
+      .hero-badges { gap: 8px; }
+    }
   </style>
 
   <!-- JSON-LD: LocalBusiness -->
@@ -1479,10 +1565,31 @@
         </div>
         <h1>Dirty Windows?<br /><span>Not Anymore.</span></h1>
         <p class="hero-desc">RYZE delivers spotless interior and exterior window cleaning for homes across Utah. We show up on time, do the job right, and leave your windows clean.</p>
-        <div class="hero-actions">
-          <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
-          <a href="#gallery" class="btn btn-outline-white">View Our Work</a>
+
+        <!-- Trust badges -->
+        <div class="hero-badges">
+          <span class="hero-badge-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Fully Licensed &amp; Insured
+          </span>
+          <span class="hero-badge-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Responds Within 2 Hours
+          </span>
+          <span class="hero-badge-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Satisfaction Guaranteed
+          </span>
         </div>
+
+        <!-- Quick inline form -->
+        <form class="hero-quick-form" action="/quote" method="get">
+          <input type="text" name="name" placeholder="Your name" autocomplete="name" />
+          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" />
+          <button type="submit" class="btn btn-primary">Get My Free Quote</button>
+        </form>
+        <p class="hero-form-note">No commitment · We respond same day</p>
+
         <div class="hero-trust">
           <div class="hero-stars">
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -1491,7 +1598,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p class="hero-trust-text"><strong>5.0 on Google</strong> · Serving Utah homeowners</p>
+          <p class="hero-trust-text"><strong>5.0 on Google</strong> · Serving Utah County &amp; Salt Lake</p>
         </div>
       </div>
     </div>
@@ -2011,8 +2118,12 @@
         <div class="footer-col">
           <h5>Service Areas</h5>
           <ul>
-            <li><a href="/quote">Utah County</a></li>
-            <li><a href="/quote">Salt Lake County</a></li>
+            <li><a href="/provo">Provo</a></li>
+            <li><a href="/orem">Orem</a></li>
+            <li><a href="/lehi">Lehi</a></li>
+            <li><a href="/draper">Draper</a></li>
+            <li><a href="/sandy">Sandy</a></li>
+            <li><a href="/murray">Murray</a></li>
           </ul>
         </div>
       </div>
