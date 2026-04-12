@@ -242,6 +242,20 @@
       display: flex;
       align-items: center;
       background: var(--black);
+      overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/images/full ext.11.jpeg');
+      background-size: cover;
+      background-position: center 38%;
+      opacity: 0.45;
+    }
+    .page-hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(8,8,8,0.90) 0%, rgba(8,8,8,0.55) 50%, rgba(8,8,8,0.25) 100%);
     }
     .page-hero-content {
       position: relative;
@@ -643,6 +657,8 @@
 
   <!-- ─── PAGE HERO ─── -->
   <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-gradient"></div>
     <div class="container">
       <div class="page-hero-content fade-up">
         <div class="section-eyebrow">Free Quote</div>
