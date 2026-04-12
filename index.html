@@ -3,6 +3,8 @@
 <head>
 
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RYZE Cleaning Services | #1 Window Cleaning in Utah County &amp; Salt Lake</title>
   <meta name="description" content="RYZE Cleaning Services — Utah's top-rated residential window cleaning company. Professional interior &amp; exterior window cleaning in Utah County &amp; Salt Lake County. Crystal clear, streak-free results guaranteed. Get a free quote today." />
@@ -1177,7 +1179,6 @@
 
     /* ── Mobile Sticky CTA Bar ── */
     .mobile-cta-bar { display: none; }
-    .mobile-cta-bar.hidden { display: none !important; }
     .nav-cta-group {
       display: flex;
       align-items: center;
@@ -1333,9 +1334,94 @@
       .steps-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2.2rem; }
     }
+
+    /* ── Hero Quick-Form ── */
+    .hero-quick-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+    .hero-quick-form input,
+    .hero-quick-form select {
+      flex: 1;
+      min-width: 140px;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      outline: none;
+      transition: border-color 0.2s;
+      min-height: 44px;
+    }
+    .hero-quick-form input::placeholder { color: rgba(255,255,255,0.45); }
+    .hero-quick-form input:focus,
+    .hero-quick-form select:focus { border-color: rgba(255,255,255,0.55); }
+    .hero-quick-form select { color: rgba(255,255,255,0.7); }
+    .hero-quick-form select option { background: #111; color: #fff; }
+    .hero-quick-form .btn-primary {
+      background: #fff;
+      color: #080808;
+      flex-shrink: 0;
+    }
+    .hero-quick-form .btn-primary:hover { background: rgba(255,255,255,0.9); }
+    .hero-form-note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: -28px;
+      margin-bottom: 36px;
+    }
+
+    /* ── Hero Trust Badges ── */
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 100px;
+      padding: 6px 13px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.03em;
+    }
+    .hero-badge-pill svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    /* ── Hero Phone ── */
+    .hero-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+    .hero-phone svg { width: 16px; height: 16px; stroke: rgba(255,255,255,0.6); }
+    .hero-phone span { color: rgba(255,255,255,0.5); font-weight: 400; font-size: 0.85rem; margin-left: 4px; }
+
+    @media (max-width: 640px) {
+      .hero-quick-form { flex-direction: column; }
+      .hero-quick-form input,
+      .hero-quick-form select,
+      .hero-quick-form .btn-primary { width: 100%; }
+      .hero-badges { gap: 8px; }
+    }
   </style>
 
-  <!-- JSON-LD: LocalBusiness -->
   <!-- JSON-LD: LocalBusiness -->
   <script type="application/ld+json">
   {
@@ -1435,12 +1521,12 @@
       {
         "@type": "Question",
         "name": "What areas in Utah do you service?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We serve homeowners across Utah County and Salt Lake County." }
+        "acceptedAnswer": { "@type": "Answer", "text": "We serve homeowners across Utah County and Salt Lake County, including Pleasant Grove, Provo, Orem, Lehi, American Fork, Springville, Spanish Fork, Draper, Sandy, South Jordan, West Jordan, and Murray." }
       },
       {
         "@type": "Question",
         "name": "How quickly can I get a quote?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We typically respond to quote requests within a few hours — usually the same day." }
+        "acceptedAnswer": { "@type": "Answer", "text": "We typically respond to quote requests within a few hours — usually the same day. Call or text (385) 484-2546 or submit the form at ryzecleaning.com." }
       },
       {
         "@type": "Question",
@@ -1470,7 +1556,7 @@
       {
         "@type": "Question",
         "name": "How much does window cleaning cost?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Pricing is based on window count for exterior jobs and scope for interior jobs. We provide free quotes, typically same day. Call or text (385) 484-2546 or submit a request at ryzecleaning.com. Booking interior and exterior together is less expensive than booking them separately." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Pricing is based on window count for exterior jobs and scope for interior jobs. We provide free quotes, typically same day. Booking interior and exterior together is less expensive than booking them separately." }
       }
     ]
   }
@@ -1483,8 +1569,8 @@
   <nav id="navbar">
     <div class="container">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">
-          <img src="images/Ryze logo white.png" alt="RYZE Cleaning Services logo" width="auto" height="90" />
+        <a href="/" class="nav-logo">
+          <img src="/images/Ryze logo white.png" alt="RYZE Cleaning Services logo" width="auto" height="90" />
         </a>
         <ul class="nav-links" id="navLinks">
           <!-- Services dropdown -->
@@ -1494,15 +1580,15 @@
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="nav-dropdown-menu">
-              <a href="exterior.html">
+              <a href="/exterior">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                 Exterior Window Cleaning
               </a>
-              <a href="interior.html">
+              <a href="/interior">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.5"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
                 Interior Window Cleaning
               </a>
-              <a href="commercial.html">
+              <a href="/commercial">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
                 Commercial Window Cleaning
               </a>
@@ -1510,6 +1596,7 @@
           </li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">Why RYZE</a></li>
+          <li><a href="/reviews">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
         <div class="nav-cta-group" id="navCtaGroup">
@@ -1517,7 +1604,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
             Call or Text?
           </a>
-          <a href="quote.html" class="nav-pill nav-pill-quote">Get a Quote</a>
+          <a href="/quote" class="nav-pill nav-pill-quote">Get a Quote</a>
         </div>
         <div class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -1538,10 +1625,31 @@
         </div>
         <h1>Dirty Windows?<br /><span>Not Anymore.</span></h1>
         <p class="hero-desc">RYZE delivers spotless interior and exterior window cleaning for homes across Utah. We show up on time, do the job right, and leave your windows clean.</p>
-        <div class="hero-actions">
-          <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
-          <a href="#gallery" class="btn btn-outline-white">View Our Work</a>
+
+        <!-- Trust badges -->
+        <div class="hero-badges">
+          <span class="hero-badge-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Fully Licensed &amp; Insured
+          </span>
+          <span class="hero-badge-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Responds Within 2 Hours
+          </span>
+          <span class="hero-badge-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Satisfaction Guaranteed
+          </span>
         </div>
+
+        <!-- Quick inline form -->
+        <form class="hero-quick-form" action="/quote" method="get">
+          <input type="text" name="name" placeholder="Your name" autocomplete="name" />
+          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" />
+          <button type="submit" class="btn btn-primary">Get My Free Quote</button>
+        </form>
+        <p class="hero-form-note">No commitment · We respond same day</p>
+
         <div class="hero-trust">
           <div class="hero-stars">
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -1550,7 +1658,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p class="hero-trust-text"><strong>5.0 on Google</strong> · Serving Utah homeowners</p>
+          <p class="hero-trust-text"><strong>5.0 on Google</strong> · Serving Utah County &amp; Salt Lake</p>
         </div>
       </div>
     </div>
@@ -1562,7 +1670,7 @@
       <span class="marquee-item">Clean Windows, Done Right <span class="marquee-dot"></span></span>
       <span class="marquee-item">Utah Window Cleaning <span class="marquee-dot"></span></span>
       <span class="marquee-item">Fully Insured &amp; Professional <span class="marquee-dot"></span></span>
-      <span class="marquee-item">500+ Happy Homeowners <span class="marquee-dot"></span></span>
+      <span class="marquee-item">100+ Happy Homeowners <span class="marquee-dot"></span></span>
       <span class="marquee-item">Satisfaction Guaranteed <span class="marquee-dot"></span></span>
       <span class="marquee-item">Interior &amp; Exterior <span class="marquee-dot"></span></span>
       <span class="marquee-item">Fast Free Quotes <span class="marquee-dot"></span></span>
@@ -1573,7 +1681,7 @@
       <span class="marquee-item">Clean Windows, Done Right <span class="marquee-dot"></span></span>
       <span class="marquee-item">Utah Window Cleaning <span class="marquee-dot"></span></span>
       <span class="marquee-item">Fully Insured &amp; Professional <span class="marquee-dot"></span></span>
-      <span class="marquee-item">500+ Happy Homeowners <span class="marquee-dot"></span></span>
+      <span class="marquee-item">100+ Happy Homeowners <span class="marquee-dot"></span></span>
       <span class="marquee-item">Satisfaction Guaranteed <span class="marquee-dot"></span></span>
       <span class="marquee-item">Interior &amp; Exterior <span class="marquee-dot"></span></span>
       <span class="marquee-item">Fast Free Quotes <span class="marquee-dot"></span></span>
@@ -1629,7 +1737,7 @@
             </div>
             <h3>Exterior Window Cleaning</h3>
             <p>Your whole home, top to bottom. Every exterior window scrubbed, squeegeed, and hand-dried before we leave.</p>
-            <a href="exterior.html" class="service-link">
+            <a href="/exterior" class="service-link">
               See what's included
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -1647,7 +1755,7 @@
             </div>
             <h3>Interior Window Cleaning</h3>
             <p>Remove smudges, fingerprints, haze, and hard water deposits from inside your home — and maximize every Utah view you paid for.</p>
-            <a href="interior.html" class="service-link">
+            <a href="/interior" class="service-link">
               See what's included
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -1665,7 +1773,7 @@
             </div>
             <h3>Commercial Window Cleaning</h3>
             <p>From storefronts and office buildings to multi-unit properties, RYZE brings the same standard to commercial spaces that we do to residential ones.</p>
-            <a href="commercial.html" class="service-link">
+            <a href="/commercial" class="service-link">
               See what's included
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -1740,7 +1848,7 @@
       <div class="how-header fade-up">
         <div class="section-eyebrow">How It Works</div>
         <h2 class="section-title">How It Works</h2>
-        <p class="section-sub">Getting your windows cleaned is straightforward. Here's what to expect from start to finish.</p>
+        <p class="section-sub" style="margin: 0 auto; text-align: center;">Getting your windows cleaned is straightforward. Here's what to expect from start to finish.</p>
       </div>
 
       <div class="steps-grid">
@@ -1797,7 +1905,7 @@
         <div class="area-chip">West Jordan</div>
         <div class="area-chip">Murray</div>
       </div>
-      <p class="areas-note fade-up">Don't see your city? <a href="quote.html">Reach out — we likely cover your area.</a></p>
+      <p class="areas-note fade-up">Don't see your city? <a href="/quote">Reach out — we likely cover your area.</a></p>
     </div>
   </section>
 
@@ -1961,70 +2069,6 @@
     <img id="lbImg" src="" alt="" />
   </div>
 
-  <!-- ─── TESTIMONIALS ─── -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="testimonials-header fade-up">
-        <div class="section-eyebrow">Customer Reviews</div>
-        <h2 class="section-title">What Our Clients<br />Are Saying</h2>
-        <p class="section-sub">Real reviews from real clients on Google. We let our work do the talking.</p>
-      </div>
-      <div class="reviews-grid">
-        <div class="review-card fade-up">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="review-text">"Super impressed with RYZE Cleaning Services! They came out to handle the windows at my place, and honestly, they did an amazing job. The team was super respectful, showed up on time, and got straight to work. Everything was done fast but with attention to detail — no streaks, no spots, just crystal-clear windows. You can tell they take pride in their work. Definitely recommending them to friends and booking again."</p>
-          <div class="review-author">
-            <div class="author-avatar">KH</div>
-            <div>
-              <p class="author-name">Kyle Hubert</p>
-              <p class="author-loc">Google Review</p>
-            </div>
-          </div>
-        </div>
-        <div class="review-card fade-up">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="review-text">"Used RYZE before listing our home and the difference was night and day. From the street the place looked completely refreshed. Crew was fast, professional, and in and out in under two hours. Every window was spotless — no streaks, no missed edges. Legitimately one of the best home service experiences I've had. Will be a repeat customer for sure."</p>
-          <div class="review-author">
-            <div class="author-avatar">JC</div>
-            <div>
-              <p class="author-name">Jake Closson</p>
-              <p class="author-loc">Google Review</p>
-            </div>
-          </div>
-        </div>
-        <div class="review-card fade-up">
-          <div class="review-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="review-text">"Hired RYZE Cleaning Services to do the windows at my house and I'm genuinely glad I did. Wasn't sure what to expect but they showed up right on time, got to work without any fuss, and the results speak for themselves — not a single streak or smudge in sight. The crew was easy to deal with, respectful of the space, and moved through everything pretty efficiently. You can tell they actually care about doing it right rather than just rushing through the job. Will definitely be calling them again and have already told a couple of neighbors about them. Good service is hard to find, so when you come across it you stick with it."</p>
-          <div class="review-author">
-            <div class="author-avatar">AC</div>
-            <div>
-              <p class="author-name">Austin Connelly</p>
-              <p class="author-loc">Google Review</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ─── FAQ ─── -->
   <section class="faq" id="faq">
     <div class="container">
@@ -2033,7 +2077,7 @@
           <div class="section-eyebrow">FAQ</div>
           <h2 class="section-title">Frequently Asked Questions</h2>
           <p class="section-sub">Everything you want to know before you book — answered honestly.</p>
-          <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
         </div>
         <div class="faq-list fade-up">
           <div class="faq-item open">
@@ -2048,7 +2092,7 @@
               How quickly can I get a quote?
               <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-a"><div class="faq-a-inner">We typically respond to quote requests within a few hours. <a href="quote.html" style="color:var(--black);text-decoration:underline">Fill out our quote form</a> or call/text us directly and we'll get back to you fast — usually the same day.</div></div>
+            <div class="faq-a"><div class="faq-a-inner">We typically respond to quote requests within a few hours. <a href="/quote" style="color:var(--black);text-decoration:underline">Fill out our quote form</a> or call/text us directly and we'll get back to you fast — usually the same day.</div></div>
           </div>
           <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">
@@ -2098,7 +2142,7 @@
         <h2>Never Look Through<br /><span>Dirty Windows Again.</span></h2>
         <p>Fast, free quotes. Flexible scheduling. We get the job done right every time.</p>
         <div class="cta-actions">
-          <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
           <a href="#gallery" class="btn btn-outline-white">View Our Work</a>
         </div>
       </div>
@@ -2116,10 +2160,10 @@
         <div class="footer-col">
           <h5>Services</h5>
           <ul>
-            <li><a href="exterior.html">Exterior Window Cleaning</a></li>
-            <li><a href="interior.html">Interior Window Cleaning</a></li>
-            <li><a href="commercial.html">Commercial Window Cleaning</a></li>
-            <li><a href="quote.html">Post-Construction</a></li>
+            <li><a href="/exterior">Exterior Window Cleaning</a></li>
+            <li><a href="/interior">Interior Window Cleaning</a></li>
+            <li><a href="/commercial">Commercial Window Cleaning</a></li>
+            <li><a href="/quote">Post-Construction</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -2128,14 +2172,18 @@
             <li><a href="#about">Why RYZE</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="quote.html">Contact</a></li>
+            <li><a href="/quote">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Service Areas</h5>
           <ul>
-            <li><a href="quote.html">Utah County</a></li>
-            <li><a href="quote.html">Salt Lake County</a></li>
+            <li><a href="/provo">Provo</a></li>
+            <li><a href="/orem">Orem</a></li>
+            <li><a href="/lehi">Lehi</a></li>
+            <li><a href="/draper">Draper</a></li>
+            <li><a href="/sandy">Sandy</a></li>
+            <li><a href="/murray">Murray</a></li>
           </ul>
         </div>
       </div>
@@ -2223,19 +2271,6 @@
       if (!isOpen) item.classList.add('open');
     }
 
-    // Hide mobile sticky bar when any quote CTA is visible in the viewport
-    (function() {
-      const bar = document.querySelector('.mobile-cta-bar');
-      if (!bar) return;
-      const btns = document.querySelectorAll('.btn-primary, .form-submit');
-      if (!btns.length) return;
-      const visible = new Set();
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => e.isIntersecting ? visible.add(e.target) : visible.delete(e.target));
-        bar.classList.toggle('hidden', visible.size > 0);
-      }, { threshold: 0.5 });
-      btns.forEach(btn => observer.observe(btn));
-    })();
   </script>
 
   <!-- ─── MOBILE STICKY CTA ─── -->
@@ -2244,7 +2279,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
       Call or Text?
     </a>
-    <a href="quote.html" class="mobile-cta-quote">
+    <a href="/quote" class="mobile-cta-quote">
       Get a Free Quote
     </a>
   </div>
