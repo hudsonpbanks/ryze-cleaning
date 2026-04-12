@@ -1177,6 +1177,7 @@
 
     /* ── Mobile Sticky CTA Bar ── */
     .mobile-cta-bar { display: none; }
+    .mobile-cta-bar.hidden { display: none !important; }
     .nav-cta-group {
       display: flex;
       align-items: center;
@@ -1335,14 +1336,17 @@
   </style>
 
   <!-- JSON-LD: LocalBusiness -->
+  <!-- JSON-LD: LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "name": "RYZE Cleaning Services",
-    "description": "Professional residential and commercial window cleaning across Utah. Interior and exterior window cleaning with crystal clear, streak-free results. Satisfaction guaranteed.",
+    "description": "Locally owned window and exterior cleaning company based in Pleasant Grove, Utah. Residential and commercial window cleaning across Utah County and Salt Lake County. Streak-free results guaranteed.",
     "url": "https://ryzecleaning.com",
     "image": "https://ryzecleaning.com/images/full%20ext.5.jpeg",
+    "telephone": "+13854842546",
+    "email": "cleanwithryze@gmail.com",
     "priceRange": "$$",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -1353,19 +1357,72 @@
     },
     "address": {
       "@type": "PostalAddress",
+      "addressLocality": "Pleasant Grove",
       "addressRegion": "UT",
       "addressCountry": "US"
     },
     "areaServed": [
+      { "@type": "City", "name": "Pleasant Grove" },
+      { "@type": "City", "name": "Provo" },
+      { "@type": "City", "name": "Orem" },
+      { "@type": "City", "name": "Lehi" },
+      { "@type": "City", "name": "American Fork" },
+      { "@type": "City", "name": "Springville" },
+      { "@type": "City", "name": "Spanish Fork" },
+      { "@type": "City", "name": "Draper" },
+      { "@type": "City", "name": "Sandy" },
+      { "@type": "City", "name": "South Jordan" },
+      { "@type": "City", "name": "West Jordan" },
+      { "@type": "City", "name": "Murray" },
       { "@type": "AdministrativeArea", "name": "Utah County, UT" },
       { "@type": "AdministrativeArea", "name": "Salt Lake County, UT" }
     ],
-    "serviceType": [
-      "Exterior Window Cleaning",
-      "Interior Window Cleaning",
-      "Commercial Window Cleaning",
-      "Post-Construction Window Cleaning"
-    ]
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Window Cleaning Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Exterior Window Cleaning",
+            "description": "Full-home exterior window cleaning. All windows and frames cleaned, post-clean inspection before departure. Most homes completed in 2–4 hours."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Interior Window Cleaning",
+            "description": "All interior glass, sills, tracks, and frames. Sliding glass doors and French doors included. Pet- and child-safe solutions used on every job."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Interior & Exterior Package",
+            "description": "Combined interior and exterior window cleaning at a discount vs. booking each service separately."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Commercial Window Cleaning",
+            "description": "Window cleaning for office parks, multi-unit properties, and commercial buildings. Recurring contracts available. Flexible after-hours scheduling."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Post-Construction Window Cleaning",
+            "description": "New build and move-in cleans for residential and commercial construction. Removes construction debris, adhesive, and oxidation from all glass."
+          }
+        }
+      ]
+    }
   }
   </script>
 
@@ -1409,6 +1466,11 @@
         "@type": "Question",
         "name": "Do I need to be home during the cleaning?",
         "acceptedAnswer": { "@type": "Answer", "text": "For exterior-only jobs, you do not need to be home. For interior cleaning, we ask that an adult be present." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does window cleaning cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pricing is based on window count for exterior jobs and scope for interior jobs. We provide free quotes, typically same day. Call or text (385) 484-2546 or submit a request at ryzecleaning.com. Booking interior and exterior together is less expensive than booking them separately." }
       }
     ]
   }
@@ -2161,6 +2223,19 @@
       if (!isOpen) item.classList.add('open');
     }
 
+    // Hide mobile sticky bar when any quote CTA is visible in the viewport
+    (function() {
+      const bar = document.querySelector('.mobile-cta-bar');
+      if (!bar) return;
+      const btns = document.querySelectorAll('.btn-primary, .form-submit');
+      if (!btns.length) return;
+      const visible = new Set();
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => e.isIntersecting ? visible.add(e.target) : visible.delete(e.target));
+        bar.classList.toggle('hidden', visible.size > 0);
+      }, { threshold: 0.5 });
+      btns.forEach(btn => observer.observe(btn));
+    })();
   </script>
 
   <!-- ─── MOBILE STICKY CTA ─── -->

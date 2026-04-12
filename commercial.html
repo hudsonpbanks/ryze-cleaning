@@ -576,6 +576,7 @@
 
     /* ── Mobile Sticky CTA Bar ── */
     .mobile-cta-bar { display: none; }
+    .mobile-cta-bar.hidden { display: none !important; }
     .nav-cta-group {
       display: flex;
       align-items: center;
@@ -1002,11 +1003,12 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
 
-    // Hide sticky bar when a quote CTA is visible on screen
+    // Hide mobile sticky bar when any quote CTA is visible in the viewport
     (function() {
-      const bar = document.getElementById('navCtaGroup');
+      const bar = document.querySelector('.mobile-cta-bar');
       if (!bar) return;
-      const btns = document.querySelectorAll('.btn-primary:not(.nav-cta), .form-submit');
+      const btns = document.querySelectorAll('.btn-primary, .form-submit');
+      if (!btns.length) return;
       const visible = new Set();
       const observer = new IntersectionObserver(entries => {
         entries.forEach(e => e.isIntersecting ? visible.add(e.target) : visible.delete(e.target));
