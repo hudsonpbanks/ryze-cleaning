@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interior Window Cleaning Utah | RYZE Cleaning Services</title>
-  <meta name="description" content="Professional interior window cleaning for Utah homes. RYZE removes smudges, fingerprints, haze, and hard water deposits from inside your home. Streak-free, safe cleaning solutions. Serving the Wasatch Front. Free quotes." />
-  <meta name="keywords" content="interior window cleaning Utah, inside window cleaning Utah County, residential interior window washing, window cleaning inside home Provo Orem Lehi, interior window cleaning Wasatch Front" />
+  <title>Commercial Window Cleaning Utah | RYZE Cleaning Services</title>
+  <meta name="description" content="Professional commercial window cleaning for Utah businesses. RYZE serves storefronts, office buildings, and multi-unit properties across the Wasatch Front. First impressions matter — keep your glass spotless. Flexible scheduling, free quotes." />
+  <meta name="keywords" content="commercial window cleaning Utah, storefront window cleaning Utah County, office window cleaning Salt Lake, business window cleaning Wasatch Front, commercial window washing Provo Orem" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://ryzecleaning.com/interior.html" />
+  <link rel="canonical" href="https://ryzecleaning.com/commercial" />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ryzecleaning.com/interior.html" />
-  <meta property="og:title" content="Interior Window Cleaning Utah | RYZE Cleaning Services" />
-  <meta property="og:description" content="Professional interior window cleaning for Utah homes. Remove smudges, haze, and fingerprints. Safe solutions, streak-free results. Serving the Wasatch Front." />
-  <meta property="og:image" content="https://ryzecleaning.com/images/single%20int.9.jpg" />
+  <meta property="og:url" content="https://ryzecleaning.com/commercial" />
+  <meta property="og:title" content="Commercial Window Cleaning Utah | RYZE Cleaning Services" />
+  <meta property="og:description" content="Professional commercial window cleaning for Utah businesses. Storefronts, offices, and multi-unit properties. Flexible scheduling, free quotes." />
+  <meta property="og:image" content="https://ryzecleaning.com/images/commercial.jpeg" />
   <meta property="og:site_name" content="RYZE Cleaning Services" />
   <meta property="og:locale" content="en_US" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Interior Window Cleaning Utah | RYZE Cleaning Services" />
-  <meta name="twitter:description" content="Professional interior window cleaning for Utah homes. Streak-free, safe solutions. Serving the Wasatch Front." />
-  <meta name="twitter:image" content="https://ryzecleaning.com/images/single%20int.9.jpg" />
+  <meta name="twitter:title" content="Commercial Window Cleaning Utah | RYZE Cleaning Services" />
+  <meta name="twitter:description" content="Professional commercial window cleaning for Utah businesses. First impressions matter — keep your glass spotless." />
+  <meta name="twitter:image" content="https://ryzecleaning.com/images/commercial.jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -30,8 +30,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Interior Window Cleaning",
-    "description": "Professional interior window cleaning for residential homes across the Utah Wasatch Front. Removes smudges, fingerprints, haze, and hard water deposits. Safe, streak-free solutions.",
+    "name": "Commercial Window Cleaning",
+    "description": "Professional commercial window cleaning for businesses across the Utah Wasatch Front. Storefronts, office buildings, and multi-unit properties — flexible scheduling, zero-streak results.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "RYZE Cleaning Services",
@@ -41,7 +41,7 @@
       "Utah County, UT",
       "Salt Lake County, UT"
     ],
-    "url": "https://ryzecleaning.com/interior.html"
+    "url": "https://ryzecleaning.com/commercial"
   }
   </script>
 
@@ -272,7 +272,7 @@
       position: absolute;
       inset: 0;
       background-size: cover;
-      background-position: center 30%;
+      background-position: center 40%;
       opacity: 0.35;
     }
     .page-hero-gradient {
@@ -414,34 +414,6 @@
       margin-bottom: 28px;
       line-height: 1.6;
     }
-
-    /* ── Photo Grid ── */
-    .photo-grid-section {
-      padding: 80px 0;
-      background: var(--black);
-    }
-    .photo-grid-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .photo-grid-header .section-eyebrow { color: rgba(255,255,255,0.5); }
-    .photo-grid-header .section-eyebrow::before { background: rgba(255,255,255,0.3); }
-    .photo-grid-header .section-title { color: var(--white); }
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-    .photo-grid img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-    .photo-grid img:hover { transform: scale(1.03); }
 
     /* ── Why RYZE Pillars ── */
     .why-ryze {
@@ -645,8 +617,8 @@
     }
     @media (max-width: 860px) {
       .feature-inner { grid-template-columns: 1fr; }
-      .photo-grid { grid-template-columns: 1fr 1fr; }
-      .photo-grid img:last-child { display: none; }
+      .feature-imgs { grid-template-columns: 1fr; }
+      .feature-img-sm { display: none; }
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
       .stat-item:nth-child(2) { border-right: none; }
       .related-grid { grid-template-columns: 1fr; max-width: 480px; }
@@ -688,14 +660,9 @@
       .page-hero { min-height: 70vh; }
       .page-hero-content { padding: 48px 0 36px; }
       .feature, .why-ryze, .related-services, .svc-cta { padding: 64px 0; }
-      .photo-grid-section { padding: 56px 0; }
-      .photo-grid { grid-template-columns: 1fr; }
-      .photo-grid img { height: 220px; display: block !important; }
       .pillars-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; text-align: center; }
-      .feature-imgs { grid-template-columns: 1fr; }
-      .feature-img-sm { display: none; }
       input, select, textarea { font-size: 16px; }
       /* Sticky bottom CTA */
       .nav-cta-group { display: none; }
@@ -745,8 +712,8 @@
   <nav id="navbar">
     <div class="container">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">
-          <img src="images/Ryze logo white.png" alt="RYZE Cleaning Services logo" width="auto" height="90" />
+        <a href="/" class="nav-logo">
+          <img src="/images/Ryze logo white.png" alt="RYZE Cleaning Services logo" width="auto" height="90" />
         </a>
         <ul class="nav-links" id="navLinks">
           <li class="nav-item-dropdown" id="servicesDropdown">
@@ -755,30 +722,31 @@
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="nav-dropdown-menu">
-              <a href="exterior.html">
+              <a href="/exterior">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                 Exterior Window Cleaning
               </a>
-              <a href="interior.html">
+              <a href="/interior">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.5"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
                 Interior Window Cleaning
               </a>
-              <a href="commercial.html">
+              <a href="/commercial">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
                 Commercial Window Cleaning
               </a>
             </div>
           </li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#about">Why RYZE</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="/#gallery">Gallery</a></li>
+          <li><a href="/#about">Why RYZE</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/#faq">FAQ</a></li>
         </ul>
         <div class="nav-cta-group" id="navCtaGroup">
           <a href="tel:+13854842546" class="nav-pill nav-pill-call">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
             Call or Text?
           </a>
-          <a href="quote.html" class="nav-pill nav-pill-quote">Get a Quote</a>
+          <a href="/quote" class="nav-pill nav-pill-quote">Get a Quote</a>
         </div>
         <div class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -789,15 +757,15 @@
 
   <!-- ─── PAGE HERO ─── -->
   <section class="page-hero">
-    <div class="page-hero-bg" style="background-image: url('images/single int.9.jpg')"></div>
+    <div class="page-hero-bg" style="background-image: url('images/commercial.jpeg')"></div>
     <div class="page-hero-gradient"></div>
     <div class="container">
       <div class="page-hero-content fade-up">
-        <div class="section-eyebrow" style="color:rgba(255,255,255,0.5);">Interior Window Cleaning</div>
-        <h1>Clean Windows From<br />the Inside Out.</h1>
-        <p>Smudges, fingerprints, haze, and hard water deposits, gone. Every interior pane cleaned properly, every time.</p>
+        <div class="section-eyebrow" style="color:rgba(255,255,255,0.5);">Commercial Window Cleaning</div>
+        <h1>Your Business,<br />Looking Its Best.</h1>
+        <p>First impressions start at the glass. RYZE keeps your storefront, office windows, and commercial property clean so your business always looks sharp.</p>
         <div class="page-hero-actions">
-          <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
           <a href="#what-included" class="btn btn-outline-white">What's Included</a>
         </div>
       </div>
@@ -832,49 +800,28 @@
   <section class="feature" id="what-included">
     <div class="container">
       <div class="feature-inner">
-        <!-- Image grid -->
+        <!-- Feature image -->
         <div class="feature-imgs fade-up">
           <div class="feature-img-main">
-            <img src="images/single int.3.jpeg" alt="Interior window cleaning Utah home — top to bottom service" loading="lazy" width="800" height="450" />
-          </div>
-          <div class="feature-img-sm">
-            <img src="images/Single int.5.jpeg" alt="Mountain view interior window cleaning Utah County" loading="lazy" width="400" height="300" />
-          </div>
-          <div class="feature-img-sm">
-            <img src="images/single int.8.jpeg" alt="Clear interior window results Utah home" loading="lazy" width="400" height="300" />
+            <img src="/images/full ext.9.jpeg" alt="Commercial exterior window cleaning Utah storefront" loading="lazy" width="800" height="450" style="object-position: center 35%;" />
           </div>
         </div>
         <!-- Content -->
         <div class="feature-content fade-up">
           <div class="section-eyebrow">What's Included</div>
-          <h2 class="section-title">Every Pane, Perfectly<br />Clear Inside</h2>
-          <p class="feature-desc">Interior glass builds up grime you can't always see until the light hits it. We clean every interior-facing pane top to bottom and leave nothing behind.</p>
+          <h2 class="section-title">Professional Results<br />for Every Property</h2>
+          <p class="feature-desc">Whether you run a single storefront or manage a multi-building office park, RYZE brings the same level of care to every commercial project we take on.</p>
           <ul class="checklist">
-            <li>All interior-facing glass cleaned top-to-bottom</li>
-            <li>Smudges, fingerprints, and pet nose prints removed</li>
-            <li>Haze and oxidation buildup eliminated</li>
-            <li>Sills, tracks, and interior frames wiped clean</li>
-            <li>Sliding glass doors and French doors included</li>
-            <li>Pet and child-safe cleaning solutions only</li>
+            <li>Storefront glass, lobby windows, and entry doors</li>
+            <li>Multi-story building exteriors</li>
+            <li>Office park and multi-unit property windows</li>
+            <li>Post-construction and move-in commercial cleans</li>
+            <li>Scheduled recurring service contracts available</li>
+            <li>Flexible after-hours scheduling to minimize disruption</li>
           </ul>
-          <p class="price-note">Often paired with exterior cleaning for a complete in-and-out package. Ask about our combined service discount.</p>
-          <a href="quote.html" class="btn btn-primary">Book Interior Cleaning</a>
+          <p class="price-note">Commercial pricing is based on property size and window count. Reach out and we'll get back to you fast, usually the same day.</p>
+          <a href="/quote" class="btn btn-primary">Get a Commercial Quote</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── PHOTO GRID ─── -->
-  <section class="photo-grid-section">
-    <div class="container">
-      <div class="photo-grid-header fade-up">
-        <div class="section-eyebrow">Our Interior Work</div>
-        <h2 class="section-title">See the Results</h2>
-      </div>
-      <div class="photo-grid fade-up">
-        <img src="images/Single Int.2.jpg" alt="Interior window cleaning results Utah home" loading="lazy" width="400" height="280" />
-        <img src="images/single int.10.jpeg" alt="Utah mountain view through clean interior windows" loading="lazy" width="400" height="280" />
-        <img src="images/single int.6.jpeg" alt="Glass patio door interior cleaning Utah County" loading="lazy" width="400" height="280" />
       </div>
     </div>
   </section>
@@ -885,7 +832,7 @@
       <div class="why-ryze-header fade-up">
         <div class="section-eyebrow">Why Choose RYZE</div>
         <h2 class="section-title">The RYZE Standard</h2>
-        <p class="section-sub" style="margin: 0 auto;">Fully insured and satisfaction guaranteed. We treat the inside of your home with the same care as the outside.</p>
+        <p class="section-sub" style="margin: 0 auto;">Fully insured and satisfaction guaranteed. The same standard we bring to residential jobs, applied to your business.</p>
       </div>
       <div class="pillars-grid">
         <div class="pillar-card fade-up">
@@ -893,28 +840,28 @@
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h3>Fully Insured</h3>
-          <p>Your home and belongings are protected on every job. Comprehensive liability insurance, always.</p>
+          <p>Your property and business are protected. We carry comprehensive liability insurance on every commercial job.</p>
         </div>
         <div class="pillar-card fade-up">
           <div class="pillar-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h3>Always On Time</h3>
-          <p>We confirm 24 hours ahead and show up when we say we will. Your time is respected.</p>
+          <h3>Flexible Scheduling</h3>
+          <p>Early morning, evenings, weekends — we work around your business hours to avoid any disruption.</p>
         </div>
         <div class="pillar-card fade-up">
           <div class="pillar-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <h3>Safe Solutions</h3>
-          <p>Pet and child-safe cleaning products only. We treat your home's interior with extra care.</p>
+          <h3>Recurring Contracts</h3>
+          <p>Monthly, quarterly, or custom schedules available. Keep your property looking sharp year-round.</p>
         </div>
         <div class="pillar-card fade-up">
           <div class="pillar-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3>Satisfaction Guaranteed</h3>
-          <p>Not happy with a spot? Let us know and we come back to fix it at no charge.</p>
+          <p>Not satisfied with the results? Let us know and we come back to make it right at no charge.</p>
         </div>
       </div>
     </div>
@@ -931,15 +878,15 @@
         <div class="related-card fade-up">
           <h3>Exterior Window Cleaning</h3>
           <p>Your home's full exterior, every window, every floor, every frame. Scrubbed, squeegeed, and hand-dried before we leave.</p>
-          <a href="exterior.html" class="related-card-link">
+          <a href="/exterior" class="related-card-link">
             Learn more
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
         <div class="related-card fade-up">
-          <h3>Commercial Window Cleaning</h3>
-          <p>Storefronts, office buildings, and multi-unit properties across the Wasatch Front — flexible scheduling, professional results.</p>
-          <a href="commercial.html" class="related-card-link">
+          <h3>Interior Window Cleaning</h3>
+          <p>Remove smudges, fingerprints, and haze from inside. Safe solutions, clean results on every interior pane.</p>
+          <a href="/interior" class="related-card-link">
             Learn more
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -952,11 +899,11 @@
   <section class="svc-cta">
     <div class="container">
       <div class="fade-up">
-        <h2>Ready to Clean Up Your<br />Interior Windows?</h2>
-        <p>Fast, free quotes. Flexible scheduling. We get the job done right every time.</p>
+        <h2>Make a Strong<br />First Impression.</h2>
+        <p>Fast, free commercial quotes. Flexible scheduling. We get the job done right every time.</p>
         <div class="svc-cta-actions">
-          <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
-          <a href="index.html#gallery" class="btn btn-outline-white">View Our Work</a>
+          <a href="/quote" class="btn btn-primary">Get a Commercial Quote</a>
+          <a href="/#gallery" class="btn btn-outline-white">View Our Work</a>
         </div>
       </div>
     </div>
@@ -967,32 +914,35 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="images/Ryze logo white.png" alt="RYZE Cleaning Services" width="auto" height="34" />
-          <p>Professional residential window cleaning for homes across Utah. Quality work, every job.</p>
+          <img src="/images/Ryze logo white.png" alt="RYZE Cleaning Services" width="auto" height="34" />
+          <p>Professional window cleaning for homes and businesses across Utah. Quality work, every job.</p>
         </div>
         <div class="footer-col">
           <h5>Services</h5>
           <ul>
-            <li><a href="exterior.html">Exterior Window Cleaning</a></li>
-            <li><a href="interior.html">Interior Window Cleaning</a></li>
-            <li><a href="commercial.html">Commercial Window Cleaning</a></li>
-            <li><a href="quote.html">Post-Construction</a></li>
+            <li><a href="/exterior">Exterior Window Cleaning</a></li>
+            <li><a href="/interior">Interior Window Cleaning</a></li>
+            <li><a href="/commercial">Commercial Window Cleaning</a></li>
+            <li><a href="/quote">Post-Construction</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="index.html#about">Why RYZE</a></li>
-            <li><a href="index.html#gallery">Gallery</a></li>
-            <li><a href="index.html#faq">FAQ</a></li>
-            <li><a href="quote.html">Contact</a></li>
+            <li><a href="/#about">Why RYZE</a></li>
+            <li><a href="/#gallery">Gallery</a></li>
+          <li><a href="/#about">Why RYZE</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="/quote">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Service Areas</h5>
           <ul>
-            <li><a href="quote.html">Utah County</a></li>
-            <li><a href="quote.html">Salt Lake County</a></li>
+            <li><a href="/quote">Utah County</a></li>
+            <li><a href="/quote">Salt Lake County</a></li>
           </ul>
         </div>
       </div>
@@ -1010,7 +960,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
       Call or Text?
     </a>
-    <a href="quote.html" class="mobile-cta-quote">
+    <a href="/quote" class="mobile-cta-quote">
       Get a Free Quote
     </a>
   </div>

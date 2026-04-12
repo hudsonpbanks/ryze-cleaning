@@ -65,6 +65,8 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--gray-600);
   line-height: 1.75;
   max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
 }
 .btn {
   display: inline-flex;
@@ -552,6 +554,7 @@ nav.shrunk .nav-logo img { height: 54px; }
 .how-header .section-eyebrow { justify-content: center; }
 .how-header .section-eyebrow::before { display: none; }
 .how-header .section-title { margin-bottom: 16px; }
+.how-header .section-sub { margin: 0 auto; text-align: center; }
 .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; position: relative; }
 .steps-grid::before {
   content: '';
