@@ -18,6 +18,22 @@ All quotes are free and typically returned same day.
 
 Based in Pleasant Grove, Utah. Serves Utah County and Salt Lake County.
 
+## Locations Served
+
+Dedicated location pages with local service details:
+
+- Provo — https://ryzecleaning.com/provo
+- Orem — https://ryzecleaning.com/orem
+- Lehi — https://ryzecleaning.com/lehi
+- Draper — https://ryzecleaning.com/draper
+- Sandy — https://ryzecleaning.com/sandy
+- Murray — https://ryzecleaning.com/murray
+- American Fork — https://ryzecleaning.com/locations/american-fork
+- Springville — https://ryzecleaning.com/locations/springville
+- Spanish Fork — https://ryzecleaning.com/locations/spanish-fork
+- South Jordan — https://ryzecleaning.com/locations/south-jordan
+- West Jordan — https://ryzecleaning.com/locations/west-jordan
+
 ## Contact
 
 - Phone/Text: (385) 484-2546
@@ -39,6 +55,23 @@ Pleasant Grove, Provo, Orem, Lehi, American Fork, Springville, Spanish Fork, Dra
 - 24-hour confirmation call before every appointment
 - Flexible scheduling including weekends
 - Locally owned and operated
+
+## Markdown Mirrors
+
+Plain-text versions of every page, served as text/plain:
+
+- https://ryzecleaning.com/index.txt
+- https://ryzecleaning.com/exterior/index.txt
+- https://ryzecleaning.com/interior/index.txt
+- https://ryzecleaning.com/commercial/index.txt
+- https://ryzecleaning.com/quote/index.txt
+- https://ryzecleaning.com/reviews/index.txt
+- https://ryzecleaning.com/draper/index.txt
+- https://ryzecleaning.com/lehi/index.txt
+- https://ryzecleaning.com/murray/index.txt
+- https://ryzecleaning.com/orem/index.txt
+- https://ryzecleaning.com/provo/index.txt
+- https://ryzecleaning.com/sandy/index.txt
 
 ## What Makes Us Different
 
