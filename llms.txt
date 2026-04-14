@@ -33,6 +33,18 @@ Dedicated location pages with local service details:
 - Spanish Fork — https://ryzecleaning.com/locations/spanish-fork
 - South Jordan — https://ryzecleaning.com/locations/south-jordan
 - West Jordan — https://ryzecleaning.com/locations/west-jordan
+- Pleasant Grove — https://ryzecleaning.com/locations/pleasant-grove
+- Lindon — https://ryzecleaning.com/locations/lindon
+- Highland — https://ryzecleaning.com/locations/highland
+- Alpine — https://ryzecleaning.com/locations/alpine
+- Cedar Hills — https://ryzecleaning.com/locations/cedar-hills
+- Vineyard — https://ryzecleaning.com/locations/vineyard
+- Saratoga Springs — https://ryzecleaning.com/locations/saratoga-springs
+- Eagle Mountain — https://ryzecleaning.com/locations/eagle-mountain
+- Payson — https://ryzecleaning.com/locations/payson
+- Salem — https://ryzecleaning.com/locations/salem
+- Mapleton — https://ryzecleaning.com/locations/mapleton
+- Santaquin — https://ryzecleaning.com/locations/santaquin
 
 ## Contact
 
@@ -56,22 +68,39 @@ Pleasant Grove, Provo, Orem, Lehi, American Fork, Springville, Spanish Fork, Dra
 - Flexible scheduling including weekends
 - Locally owned and operated
 
-## Markdown Mirrors
+## Markdown Mirrors (Clean AI-Readable Versions)
 
-Plain-text versions of every page, served as text/plain:
+Every page on this site has a plain markdown mirror. Add /index.md to any URL to get the clean content without navigation, scripts, or layout chrome.
 
-- https://ryzecleaning.com/index.txt
-- https://ryzecleaning.com/exterior/index.txt
-- https://ryzecleaning.com/interior/index.txt
-- https://ryzecleaning.com/commercial/index.txt
-- https://ryzecleaning.com/quote/index.txt
-- https://ryzecleaning.com/reviews/index.txt
-- https://ryzecleaning.com/draper/index.txt
-- https://ryzecleaning.com/lehi/index.txt
-- https://ryzecleaning.com/murray/index.txt
-- https://ryzecleaning.com/orem/index.txt
-- https://ryzecleaning.com/provo/index.txt
-- https://ryzecleaning.com/sandy/index.txt
+- https://ryzecleaning.com/index.md
+- https://ryzecleaning.com/exterior/index.md
+- https://ryzecleaning.com/interior/index.md
+- https://ryzecleaning.com/commercial/index.md
+- https://ryzecleaning.com/quote/index.md
+- https://ryzecleaning.com/reviews/index.md
+- https://ryzecleaning.com/draper/index.md
+- https://ryzecleaning.com/lehi/index.md
+- https://ryzecleaning.com/murray/index.md
+- https://ryzecleaning.com/orem/index.md
+- https://ryzecleaning.com/provo/index.md
+- https://ryzecleaning.com/sandy/index.md
+- https://ryzecleaning.com/locations/american-fork/index.md
+- https://ryzecleaning.com/locations/south-jordan/index.md
+- https://ryzecleaning.com/locations/spanish-fork/index.md
+- https://ryzecleaning.com/locations/springville/index.md
+- https://ryzecleaning.com/locations/west-jordan/index.md
+- https://ryzecleaning.com/locations/pleasant-grove/index.md
+- https://ryzecleaning.com/locations/lindon/index.md
+- https://ryzecleaning.com/locations/highland/index.md
+- https://ryzecleaning.com/locations/alpine/index.md
+- https://ryzecleaning.com/locations/cedar-hills/index.md
+- https://ryzecleaning.com/locations/vineyard/index.md
+- https://ryzecleaning.com/locations/saratoga-springs/index.md
+- https://ryzecleaning.com/locations/eagle-mountain/index.md
+- https://ryzecleaning.com/locations/payson/index.md
+- https://ryzecleaning.com/locations/salem/index.md
+- https://ryzecleaning.com/locations/mapleton/index.md
+- https://ryzecleaning.com/locations/santaquin/index.md
 
 ## What Makes Us Different
 

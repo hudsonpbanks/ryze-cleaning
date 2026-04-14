@@ -270,16 +270,16 @@
       background-image: url('images/full ext.10.jpg');
       background-size: cover;
       background-position: center 30%;
-      opacity: 0.3;
+      opacity: 0.42;
     }
     .hero-gradient {
       position: absolute;
       inset: 0;
       background: linear-gradient(
-        135deg,
-        rgba(8,8,8,0.75) 0%,
-        rgba(8,8,8,0.35) 55%,
-        rgba(8,8,8,0.6) 100%
+        to right,
+        rgba(8,8,8,0.92) 0%,
+        rgba(8,8,8,0.6) 50%,
+        rgba(8,8,8,0.18) 100%
       );
     }
     .hero-content {
@@ -1335,6 +1335,19 @@
       .hero h1 { font-size: 2.2rem; }
     }
 
+    /* ── Hero CTA Buttons ── */
+    .hero-btn-primary {
+      background: var(--white);
+      color: var(--black);
+    }
+    .hero-btn-primary:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
     /* ── Hero Quick-Form ── */
     .hero-quick-form {
       display: flex;
@@ -1380,9 +1393,9 @@
     /* ── Hero Trust Badges ── */
     .hero-badges {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 32px;
+      margin-bottom: 36px;
     }
     .hero-badge-pill {
       display: inline-flex;
@@ -1626,29 +1639,21 @@
         <h1>Dirty Windows?<br /><span>Not Anymore.</span></h1>
         <p class="hero-desc">RYZE delivers spotless interior and exterior window cleaning for homes across Utah. We show up on time, do the job right, and leave your windows clean.</p>
 
-        <!-- Trust badges -->
+        <div class="hero-actions">
+          <a href="/quote" class="btn hero-btn-primary">Get a Free Quote</a>
+          <a href="tel:+13854842546" class="btn btn-outline-white">Call or Text Us</a>
+        </div>
+
         <div class="hero-badges">
           <span class="hero-badge-pill">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Fully Licensed &amp; Insured
           </span>
           <span class="hero-badge-pill">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Responds Within 2 Hours
-          </span>
-          <span class="hero-badge-pill">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             Satisfaction Guaranteed
           </span>
         </div>
-
-        <!-- Quick inline form -->
-        <form class="hero-quick-form" action="/quote" method="get">
-          <input type="text" name="name" placeholder="Your name" autocomplete="name" />
-          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" />
-          <button type="submit" class="btn btn-primary">Get My Free Quote</button>
-        </form>
-        <p class="hero-form-note">No commitment · We respond same day</p>
 
         <div class="hero-trust">
           <div class="hero-stars">
@@ -2177,13 +2182,30 @@
         </div>
         <div class="footer-col">
           <h5>Service Areas</h5>
-          <ul>
+          <ul style="columns:2;column-gap:20px">
             <li><a href="/provo">Provo</a></li>
             <li><a href="/orem">Orem</a></li>
             <li><a href="/lehi">Lehi</a></li>
             <li><a href="/draper">Draper</a></li>
             <li><a href="/sandy">Sandy</a></li>
             <li><a href="/murray">Murray</a></li>
+            <li><a href="/locations/american-fork">American Fork</a></li>
+            <li><a href="/locations/springville">Springville</a></li>
+            <li><a href="/locations/spanish-fork">Spanish Fork</a></li>
+            <li><a href="/locations/south-jordan">South Jordan</a></li>
+            <li><a href="/locations/west-jordan">West Jordan</a></li>
+            <li><a href="/locations/pleasant-grove">Pleasant Grove</a></li>
+            <li><a href="/locations/lindon">Lindon</a></li>
+            <li><a href="/locations/highland">Highland</a></li>
+            <li><a href="/locations/alpine">Alpine</a></li>
+            <li><a href="/locations/cedar-hills">Cedar Hills</a></li>
+            <li><a href="/locations/vineyard">Vineyard</a></li>
+            <li><a href="/locations/saratoga-springs">Saratoga Springs</a></li>
+            <li><a href="/locations/eagle-mountain">Eagle Mountain</a></li>
+            <li><a href="/locations/payson">Payson</a></li>
+            <li><a href="/locations/salem">Salem</a></li>
+            <li><a href="/locations/mapleton">Mapleton</a></li>
+            <li><a href="/locations/santaquin">Santaquin</a></li>
           </ul>
         </div>
       </div>
