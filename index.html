@@ -1281,10 +1281,15 @@
       .standard-img-secondary { display: none; }
 
       /* Tighter section padding on mobile */
+      .container { padding: 0 16px; }
       .services, .standard, .how, .gallery,
-      .testimonials, .faq, .cta-banner, .contact { padding: 64px 0; }
-      .areas { padding: 56px 0; }
-      .hero-content { padding: 48px 0 36px; }
+      .testimonials, .faq, .cta-banner, .contact { padding: 56px 0; }
+      .areas { padding: 48px 0; }
+      .stats-bar { padding: 20px 0; }
+      .hero-content { padding: 40px 0 28px; }
+      .section-title { font-size: 1.75rem; }
+      .hero h1 { font-size: 2.4rem; }
+      .stat-number { font-size: 2rem; }
 
       /* Prevent iOS input auto-zoom */
       .form-group input, .form-group select, .form-group textarea { font-size: 16px; }
@@ -1330,9 +1335,11 @@
       body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
     }
     @media (max-width: 420px) {
+      .container { padding: 0 14px; }
       .gallery-grid { columns: 1; }
       .steps-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.2rem; }
+      .hero h1 { font-size: 2rem; }
+      .section-title { font-size: 1.6rem; }
     }
 
     /* ── Hero CTA Buttons ── */
@@ -1432,6 +1439,35 @@
       .hero-quick-form select,
       .hero-quick-form .btn-primary { width: 100%; }
       .hero-badges { gap: 8px; }
+    }
+
+    /* ── Mid-Page CTA Strip ── */
+    .mid-cta-strip {
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 22px 0;
+    }
+    .mid-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .mid-cta-inner p {
+      font-size: 0.97rem;
+      color: var(--black);
+      line-height: 1.5;
+    }
+    @media (max-width: 640px) {
+      .mid-cta-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ── Testimonials CTA link ── */
+    .testimonials-cta {
+      text-align: center;
+      margin-top: 40px;
     }
   </style>
 
@@ -1637,7 +1673,7 @@
           Utah's Premier Window Cleaning Crew
         </div>
         <h1>Dirty Windows?<br /><span>Not Anymore.</span></h1>
-        <p class="hero-desc">RYZE delivers spotless interior and exterior window cleaning for homes across Utah. We show up on time, do the job right, and leave your windows clean.</p>
+        <p class="hero-desc">Spotless interior and exterior window cleaning for Utah homes. On time, done right, guaranteed.</p>
 
         <div class="hero-actions">
           <a href="/quote" class="btn hero-btn-primary">Get a Free Quote</a>
@@ -1789,6 +1825,16 @@
     </div>
   </section>
 
+  <!-- ─── MID-PAGE CTA STRIP ─── -->
+  <div class="mid-cta-strip">
+    <div class="container">
+      <div class="mid-cta-inner">
+        <p>Ready for crystal-clear windows? <strong>Quotes are fast, free, and commitment-free.</strong></p>
+        <a href="/quote" class="btn btn-primary">Get Your Free Quote</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ─── THE RYZE STANDARD ─── -->
   <section class="standard" id="about">
     <div class="container">
@@ -1803,7 +1849,7 @@
         <div class="standard-content fade-up">
           <div class="section-eyebrow">Why Choose RYZE</div>
           <h2 class="section-title">The RYZE Standard</h2>
-          <p class="standard-desc">This isn't just a cleaning company. RYZE was built on the idea that homeowners deserve a crew they can trust. We show up when we say we will, do the work properly, and leave your home better than we found it.</p>
+          <p class="standard-desc">RYZE was built on a simple idea: homeowners deserve a crew they can trust. We show up on time, do the work right, and leave your home better than we found it.</p>
           <div class="standard-pillars">
             <div class="pillar">
               <div class="pillar-icon">
@@ -1811,7 +1857,7 @@
               </div>
               <div class="pillar-text">
                 <h4>Fully Insured on Every Job</h4>
-                <p>Your home and property are fully protected. We carry comprehensive liability insurance on every single job.</p>
+                <p>Comprehensive liability insurance on every job. Your home is protected.</p>
               </div>
             </div>
             <div class="pillar">
@@ -1820,7 +1866,7 @@
               </div>
               <div class="pillar-text">
                 <h4>We Show Up When We Say We Will</h4>
-                <p>On-time arrivals, every time. Your schedule matters — we confirm 24 hours ahead and stick to our word.</p>
+                <p>We confirm 24 hours ahead and arrive when we say. Your schedule matters.</p>
               </div>
             </div>
             <div class="pillar">
@@ -1829,7 +1875,7 @@
               </div>
               <div class="pillar-text">
                 <h4>Uniformed, Trained &amp; Professional</h4>
-                <p>Our crew is trained on proper technique, respectful of your space, and equipped with professional-grade tools.</p>
+                <p>Trained, uniformed crew. Professional tools. Respectful of your home, every time.</p>
               </div>
             </div>
             <div class="pillar">
@@ -1838,7 +1884,7 @@
               </div>
               <div class="pillar-text">
                 <h4>Satisfaction Guaranteed</h4>
-                <p>Not happy with a spot? We come back and fix it at no charge. We don't consider the job done until you do.</p>
+                <p>Not happy? We come back and fix it at no charge. Job's not done until you are.</p>
               </div>
             </div>
           </div>
@@ -1860,22 +1906,22 @@
         <div class="step-card fade-up">
           <div class="step-num-wrap"><span class="step-num">01</span></div>
           <h3 class="step-title">Get a Free Quote</h3>
-          <p class="step-desc">Fill out our quick form or call/text us directly. We assess your home and send back a clear quote, usually within a few hours.</p>
+          <p class="step-desc">Fill out our quick form or call/text us. Clear quote back, usually within hours.</p>
         </div>
         <div class="step-card fade-up">
           <div class="step-num-wrap"><span class="step-num">02</span></div>
           <h3 class="step-title">Schedule Your Clean</h3>
-          <p class="step-desc">Pick a time that works for you — including weekends. We confirm 24 hours ahead so there are no surprises.</p>
+          <p class="step-desc">Pick a time that works — including weekends. We confirm 24 hours ahead.</p>
         </div>
         <div class="step-card fade-up">
           <div class="step-num-wrap"><span class="step-num">03</span></div>
           <h3 class="step-title">We Get to Work</h3>
-          <p class="step-desc">Our crew arrives on time, fully equipped. We use professional-grade tools and proven products, and we clean up after ourselves before we go.</p>
+          <p class="step-desc">Crew arrives on time, fully equipped. Professional tools, proven products. We clean up when we're done.</p>
         </div>
         <div class="step-card fade-up">
           <div class="step-num-wrap"><span class="step-num">04</span></div>
           <h3 class="step-title">Enjoy the View</h3>
-          <p class="step-desc">Walk through and inspect our work. If anything isn't perfect, we fix it on the spot. It's that simple.</p>
+          <p class="step-desc">Inspect our work. If anything isn't perfect, we fix it on the spot — no questions asked.</p>
         </div>
       </div>
 
@@ -1883,6 +1929,77 @@
       <div class="how-imgs fade-up">
         <img src="images/full ext.1.jpeg" alt="RYZE window cleaning crew at Utah County home" loading="lazy" width="600" height="280" />
         <img src="images/full ext.2.jpeg" alt="Professional exterior window cleaning Utah home" loading="lazy" width="600" height="280" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="testimonials" id="reviews">
+    <div class="container">
+      <div class="testimonials-header fade-up">
+        <div class="section-eyebrow">Real Reviews</div>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-sub">Don't take our word for it — here's what homeowners across Utah say about RYZE.</p>
+      </div>
+      <div class="reviews-grid">
+
+        <div class="review-card fade-up">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">"We've tried a couple other window cleaners in the area, but RYZE is in a completely different league. On time, thorough, and the windows looked incredible. Already booked them for fall."</p>
+          <div class="review-author">
+            <div class="author-avatar">SM</div>
+            <div>
+              <div class="author-name">Sarah M.</div>
+              <div class="author-loc">Provo, UT &middot; Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">"Had them do the full interior and exterior on our new construction home. Not a single streak. They even cleaned the tracks and sills without being asked. Will not use anyone else."</p>
+          <div class="review-author">
+            <div class="author-avatar">JT</div>
+            <div>
+              <div class="author-name">Jake T.</div>
+              <div class="author-loc">Lehi, UT &middot; Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">"The crew was professional and respectful the whole time. They finished faster than I expected and the results were spotless. Already recommended RYZE to three of my neighbors."</p>
+          <div class="review-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">Melissa R.</div>
+              <div class="author-loc">Draper, UT &middot; Google Review</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="testimonials-cta fade-up">
+        <a href="/reviews" class="btn btn-outline">Read More Reviews &rarr;</a>
       </div>
     </div>
   </section>
@@ -1896,19 +2013,29 @@
         <p class="section-sub">RYZE cleans windows for homeowners and businesses across Utah's most populated communities. We typically get quotes back the same day.</p>
       </div>
       <div class="areas-grid fade-up">
-        <div class="area-chip">Utah County</div>
-        <div class="area-chip">Salt Lake County</div>
-        <div class="area-chip">Provo</div>
-        <div class="area-chip">Orem</div>
-        <div class="area-chip">Lehi</div>
-        <div class="area-chip">American Fork</div>
-        <div class="area-chip">Springville</div>
-        <div class="area-chip">Spanish Fork</div>
-        <div class="area-chip">Draper</div>
-        <div class="area-chip">Sandy</div>
-        <div class="area-chip">South Jordan</div>
-        <div class="area-chip">West Jordan</div>
-        <div class="area-chip">Murray</div>
+        <a href="/provo" class="area-chip">Provo</a>
+        <a href="/orem" class="area-chip">Orem</a>
+        <a href="/lehi" class="area-chip">Lehi</a>
+        <a href="/draper" class="area-chip">Draper</a>
+        <a href="/sandy" class="area-chip">Sandy</a>
+        <a href="/murray" class="area-chip">Murray</a>
+        <a href="/locations/american-fork" class="area-chip">American Fork</a>
+        <a href="/locations/pleasant-grove" class="area-chip">Pleasant Grove</a>
+        <a href="/locations/highland" class="area-chip">Highland</a>
+        <a href="/locations/alpine" class="area-chip">Alpine</a>
+        <a href="/locations/cedar-hills" class="area-chip">Cedar Hills</a>
+        <a href="/locations/lindon" class="area-chip">Lindon</a>
+        <a href="/locations/vineyard" class="area-chip">Vineyard</a>
+        <a href="/locations/springville" class="area-chip">Springville</a>
+        <a href="/locations/spanish-fork" class="area-chip">Spanish Fork</a>
+        <a href="/locations/mapleton" class="area-chip">Mapleton</a>
+        <a href="/locations/payson" class="area-chip">Payson</a>
+        <a href="/locations/salem" class="area-chip">Salem</a>
+        <a href="/locations/santaquin" class="area-chip">Santaquin</a>
+        <a href="/locations/saratoga-springs" class="area-chip">Saratoga Springs</a>
+        <a href="/locations/eagle-mountain" class="area-chip">Eagle Mountain</a>
+        <a href="/locations/south-jordan" class="area-chip">South Jordan</a>
+        <a href="/locations/west-jordan" class="area-chip">West Jordan</a>
       </div>
       <p class="areas-note fade-up">Don't see your city? <a href="/quote">Reach out — we likely cover your area.</a></p>
     </div>
@@ -2133,6 +2260,20 @@
               <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-a"><div class="faq-a-inner">For exterior-only jobs, you don't need to be home — just make sure we have access to all areas. For interior cleaning, we ask that an adult be present during the service.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              How long does a typical cleaning take?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">Most homes take between 1.5 and 3 hours depending on the number of windows and whether you're doing interior, exterior, or both. We'll give you a time estimate when we provide your quote.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              What if it rains right after my cleaning?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">Rain water is actually clean — it won't leave streaks or residue on freshly cleaned glass. What causes dirty windows is dust and grime, not rainwater. Your windows will still look great after a rain.</div></div>
           </div>
         </div>
       </div>
